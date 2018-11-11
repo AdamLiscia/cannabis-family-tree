@@ -3,6 +3,7 @@ from pprint import pprint
 from scrapy import Request, Spider
 from scrapy.loader import ItemLoader
 
+
 class ScrapeLeafly(Spider):
     """
     Pulls information for all the strains for which Leafly has information by reading from their A-Z index page.
