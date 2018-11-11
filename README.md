@@ -3,10 +3,10 @@ A family-tree-style data visualization of cannabis strain lineage with accompany
 Wheeler for BostonHacks 2018.
 
 ## To set up the virtualenv:
-1. `pip install virtualenvwrapper`
+1. `python -m pip install virtualenvwrapper`
 2. `mkvirtualenv --python=python3.6 cannabisfamilytree`
 3. `workon cannabisfamilytree`
-4. `python -m pip install -f requirements.txt`
+4. `pip install -f requirements.txt`
 5. `deactivate  (to exit virtualenv)`
 
 ## To run the web scraper:
