@@ -8,7 +8,15 @@
 import scrapy
 
 
-class DataCollectionItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class CannabisStrain(scrapy.Item):
+    """
+    Contains information about a particular strain of cannabis scraped from its detail page.
+    """
+    name = scrapy.Field()
+    url = scrapy.Field()
+    description = scrapy.Field()
+    parent_strains = scrapy.Field()
+    common_effects = scrapy.Field()
+    medical_uses = scrapy.Field()
+    negatives = scrapy.Field()
+    flavors = scrapy.Field()
