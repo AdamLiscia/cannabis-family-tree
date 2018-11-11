@@ -9,6 +9,8 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+from os import getcwd
+
 BOT_NAME = 'data_collection'
 
 SPIDER_MODULES = ['data_collection.spiders']
@@ -64,9 +66,14 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'data_collection.pipelines.DataCollectionPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'data_collection.pipelines.StrainParentsPipeline': 300,
+}
+
+FEED_URI = f'file://{getcwd()}/data_collection/output.json'
+FEED_FORMAT = 'json'
+FEED_EXPORT_ENCODING = 'utf-8'
+FEED_EXPORT_INDENT = 2
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
